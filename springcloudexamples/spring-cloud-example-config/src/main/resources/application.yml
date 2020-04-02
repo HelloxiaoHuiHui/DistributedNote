@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-cloud-example-config
+  profiles:
+    active: native #启用本地配置文件
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configs/ #配置文件扫描目录
+
+server:
+  port: 8000 #服务端口

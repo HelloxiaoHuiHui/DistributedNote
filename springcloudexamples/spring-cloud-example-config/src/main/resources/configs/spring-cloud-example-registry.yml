@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-example-registry
+
+# Eureka相关配置 通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
+eureka:
+  client:
+    register-with-eureka: false #不注册服务
+    fetch-registry: false #不拉去服务清单
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/ #多个通过英文逗号分隔
+
+server:
+  port: 8001
